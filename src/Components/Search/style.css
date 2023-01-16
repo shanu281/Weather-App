@@ -1,0 +1,23 @@
+.input{
+    width: 60%;
+    border-radius: 4px;
+    height: 2.5rem;
+    padding: 1rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+h2{
+    font-size: 2rem;
+    color: rgb(252, 248, 251);
+    color: aqua;
+}
+h3{
+    color: black;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 0;
+}
+.card{
+  margin: 2rem;
+}  
+  
