@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState , useEffect} from "react";
 import Search from "../Search";
 import "./style.css";
 import { message } from "antd";
-import { Card } from "antd";
+
 function App() {
   const [messageApi, contextHolder] = message.useMessage();
   const [city, setCity] = useState("");
@@ -17,11 +17,11 @@ function App() {
     });
   };
 
-  const getWeatherData = (event) => {
+   let getWeatherData = (event) => {
     if (event.key == "Enter") {
       fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=${apiKey}`
-      )
+        )
         .then((res) => res.json())
         .then((data) => {
           if (data.message) {
@@ -34,7 +34,8 @@ function App() {
         });
       };
     }; 
-  
+ 
+    
 
   return (
     <div className="container">
@@ -44,7 +45,7 @@ function App() {
         <Search
           city={city}
           setCity={setCity}
-          getWeatherData={getWeatherData}
+           getWeatherData={getWeatherData}
           weatherData={weatherData}
         />
       </center>
