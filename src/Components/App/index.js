@@ -8,7 +8,9 @@ function App() {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState([{}]);
 
-  const apiKey = process.env.REACT_APP_WEATHER_KEY;
+  // const apiKey = process.env.REACT_APP_WEATHER_KEY;
+
+const apiKey = "d524237890eb5e0c7a23e62d2cb19eb4"
 
   const displayMessage = ({ content = "", type = "success" }) => {
     messageApi.open({
@@ -30,8 +32,9 @@ function App() {
             displayMessage({ content: "found" });
           }
           setWeatherData(data);
-          
+          event.target.value= ""
         });
+       
       };
     }; 
  

@@ -14,7 +14,7 @@ function Search(props) {
         placeholder="Enter a city"
         className="input"
         onChange={handleChange}
-        value={props.city}
+      
         onKeyPress={props.getWeatherData }
       />
       <div className="site-card-border-less-wrapper"></div>

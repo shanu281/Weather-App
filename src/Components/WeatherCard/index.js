@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "antd/es/card/Card";
+import "./style.css";
 
 function WeatherCard(props) {
     const {sys ={}, main={}, wind={}, visibility, name} = props
