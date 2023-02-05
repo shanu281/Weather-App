@@ -1,4 +1,4 @@
-import { useState , useEffect} from "react";
+import { useState, useEffect } from "react";
 import Search from "../Search";
 import "./style.css";
 import { message } from "antd";
@@ -8,9 +8,7 @@ function App() {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState([{}]);
 
-  // const apiKey = process.env.REACT_APP_WEATHER_KEY;
-
-const apiKey = "d524237890eb5e0c7a23e62d2cb19eb4"
+  const apiKey = "d524237890eb5e0c7a23e62d2cb19eb4";
 
   const displayMessage = ({ content = "", type = "success" }) => {
     messageApi.open({
@@ -19,11 +17,11 @@ const apiKey = "d524237890eb5e0c7a23e62d2cb19eb4"
     });
   };
 
-   let getWeatherData = (event) => {
+  let getWeatherData = (event) => {
     if (event.key == "Enter") {
       fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=${apiKey}`
-        )
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data.message) {
@@ -32,13 +30,10 @@ const apiKey = "d524237890eb5e0c7a23e62d2cb19eb4"
             displayMessage({ content: "found" });
           }
           setWeatherData(data);
-          event.target.value= ""
+          event.target.value = "";
         });
-       
-      };
-    }; 
- 
-    
+    }
+  };
 
   return (
     <div className="container">
@@ -48,7 +43,7 @@ const apiKey = "d524237890eb5e0c7a23e62d2cb19eb4"
         <Search
           city={city}
           setCity={setCity}
-           getWeatherData={getWeatherData}
+          getWeatherData={getWeatherData}
           weatherData={weatherData}
         />
       </center>
