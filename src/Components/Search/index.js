@@ -8,7 +8,7 @@ function Search(props) {
   };
 
   return (
-    <div>
+    <div className="weather-conatiner">
       <input
         placeholder="Enter a city"
         className="input"

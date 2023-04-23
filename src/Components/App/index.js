@@ -34,20 +34,24 @@ function App() {
         });
     }
   };
-
+console.log(weatherData)
   return (
-    <div className="container">
+    <center>
+
+    <div className="container-sec">
       {contextHolder}
-      <center>
+     
         <h1 className="header">Weather App</h1>
         <Search
           city={city}
           setCity={setCity}
           getWeatherData={getWeatherData}
           weatherData={weatherData}
-        />
-      </center>
+          />
+       
+     
     </div>
+          </center>
   );
 }
 export default App;

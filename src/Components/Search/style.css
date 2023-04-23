@@ -1,5 +1,5 @@
 .input{
-    width: 60%;
+    width: 50%;
     border-radius: 4px;
     height: 2.5rem;
     padding: 1rem;
@@ -10,7 +10,7 @@
 h2{
     font-size: 2rem;
     color: rgb(252, 248, 251);
-    color: aqua;
+    
 }
 h3{
     color: black;
@@ -18,7 +18,3 @@ h3{
     font-weight: 600;
     margin-top: 0;
 }
-.card{
-  margin: 2rem;
-}  
-  
